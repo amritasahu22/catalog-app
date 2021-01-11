@@ -2,7 +2,6 @@ import React from "react";
 
 const Product = (props) => {
 	const { products } = props;
-
 	const styles = {
 		fontSize: "12px",
 		fontFamily: "Arial",

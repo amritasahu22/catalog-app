@@ -13,7 +13,6 @@ class Products extends Component {
 		const { currentPage, sortOrder } = this.state;
 		const { data: productData } = await getProducts(currentPage, sortOrder);
 		console.log("Products service:", productData._embedded.product.length);
-
 		this.setState({
 			products: productData._embedded.product,
 		});

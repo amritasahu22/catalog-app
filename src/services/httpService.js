@@ -2,7 +2,7 @@
 // Unexpected Error - Network Down, Server Down, Database Down,
 // Some Bug in our code
 // 1 Log them
-// 2 Display a generic and friendly error message
+//2 Display a generic and friendly error message
 
 import axios from "axios";
 import { toast } from "react-toastify";
