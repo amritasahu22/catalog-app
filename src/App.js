@@ -1,12 +1,18 @@
 import React from "react";
-import "./App.css";
+import NavBar from "./components/common/Navbar/navbar";
+import Footer from "./components/common/Footer/footer";
 import Products from "./components/Products/products";
+import "./App.css";
 
 function App() {
 	return (
-		<main className="container">
-			<Products />
-		</main>
+		<>
+			<NavBar />
+			<main>
+				<Products />
+			</main>
+			<Footer />
+		</>
 	);
 }
 
