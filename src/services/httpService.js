@@ -9,7 +9,7 @@ import { toast } from "react-toastify";
 import logger from "./logService";
 
 axios.interceptors.response.use(null, (error) => {
-	console.log("Interceptor called...");
+	console.log("Interceptor called");
 
 	const expectedError =
 		error.response && error.response.status >= 400 && error.response < 500;
@@ -24,6 +24,7 @@ axios.interceptors.response.use(null, (error) => {
 
 axios.defaults.headers.common["content-type"] = "application/json";
 
-export default {
+const http = {
 	get: axios.get,
 };
+export default http;

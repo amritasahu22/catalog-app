@@ -1,9 +1,13 @@
 import React from "react";
 import "./App.css";
-import Products from "./components/Products";
+import Products from "./components/Products/products";
 
 function App() {
-	return <Products />;
+	return (
+		<main className="container">
+			<Products />
+		</main>
+	);
 }
 
 export default App;

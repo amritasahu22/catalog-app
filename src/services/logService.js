@@ -1,5 +1,9 @@
 function log(error) {
-	console.log("Logging the error...", error);
+	console.log("Logging the error: ", error);
 }
 
-export default log;
+const logger = {
+	log,
+};
+
+export default logger;

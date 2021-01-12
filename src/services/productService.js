@@ -9,7 +9,7 @@ export function getProducts(
 	pageSize = 24,
 	gender = "female"
 ) {
-	console.log("Query Params:: ", gender, pageNumber, pageSize, sortOrder);
+	//console.log("Query Params:: ", gender, pageNumber, pageSize, sortOrder);
 	const params = {
 		gender,
 		page: pageNumber,
