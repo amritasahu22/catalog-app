@@ -16,8 +16,8 @@ const Pagination = (props) => {
 	return (
 		<nav className="Paginate">
 			<ul
-				className="pagination pagination-sm 
-			  justify-content-end pt-3 clickable"
+				className="pagination pagination-md
+			  justify-content-end clickable"
 			>
 				<li className={currentPage === 1 ? "page-item disabled" : "page-item"}>
 					<a
@@ -35,7 +35,6 @@ const Pagination = (props) => {
 						page === 1 ||
 						(page >= currentPage - 2 && page <= currentPage + 2)
 					) {
-						console.log(page);
 						return (
 							<li
 								className={

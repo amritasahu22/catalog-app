@@ -1,51 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render properly 1`] = `
-<div
-  className="album py-5 bg-light my-4"
+<p
+  className="text-center font-weight-normal"
 >
-  <div
-    className="container"
-  >
-    <div
-      className="row"
-    >
-      <div
-        className="col-md-3"
-      >
-        <ListGroup
-          items={Array []}
-          keyProperty="id"
-          onItemSelect={[Function]}
-          selectedItem={null}
-          textProperty="name"
-        />
-      </div>
-      <div
-        className="col-md-9"
-      >
-        <div
-          className="row"
-        >
-          <p
-            className=" align-text-left font-weight-normal"
-          >
-            Showing 
-            0
-             products
-          </p>
-        </div>
-        <div
-          className="row"
-        >
-          <Product
-            onProductSelect={[Function]}
-            products={Array []}
-            selectedProduct={null}
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+  There are no products to display
+</p>
 `;

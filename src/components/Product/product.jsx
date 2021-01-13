@@ -5,7 +5,12 @@ const Product = (props) => {
 	const { products, selectedProduct, onProductSelect } = props;
 	const styles = {
 		fontSize: "12px",
-		fontFamily: "Arial",
+		//fontFamily: "san-serif",
+	};
+
+	const TYPE = {
+		NEW: "new",
+		SALE: "sale",
 	};
 
 	return (
@@ -27,10 +32,13 @@ const Product = (props) => {
 						/>
 						<div className="card-body">
 							<h6 className="card-title">{product._embedded.brand.name}</h6>
-							<p className="card-text" style={styles}>
+							<p
+								className="card-text font-weight-light text-truncate m-1"
+								style={styles}
+							>
 								{product.name}
 							</p>
-							<p className="card-text" style={styles}>
+							<p className="card-text font-weight-light m-1" style={styles}>
 								${product.price}
 							</p>
 						</div>

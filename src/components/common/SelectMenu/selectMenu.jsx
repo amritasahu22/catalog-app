@@ -6,7 +6,7 @@ const SelectMenu = (props) => {
 
 	return (
 		<select
-			className="custom-select m-3 clickable"
+			className="custom-select clickable"
 			value={selectedOption}
 			onChange={(e) => onOptionSelect(e.target.value)}
 		>
@@ -21,7 +21,7 @@ const SelectMenu = (props) => {
 
 SelectMenu.propTypes = {
 	options: PropTypes.array.isRequired,
-	selectedOption: PropTypes.object,
+	selectedOption: PropTypes.string,
 	onOptionSelect: PropTypes.func.isRequired,
 };
 

@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBox should render properly with props 1`] = `
+<input
+  className="form-control mx-3"
+  name="query"
+  onChange={[Function]}
+  placeholder="Search..."
+  type="text"
+  value="2xu"
+/>
+`;

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectMenu should render properly with props 1`] = `
+<select
+  className="custom-select clickable"
+  onChange={[Function]}
+>
+  <option
+    key="1"
+    value="popularity"
+  >
+    Popularity
+  </option>
+  <option
+    key="2"
+    value="new"
+  >
+    New Arrivals
+  </option>
+</select>
+`;

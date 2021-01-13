@@ -10,17 +10,17 @@ export function getProducts(
 	pageSize = 24,
 	gender = "female"
 ) {
-	//console.log("Query Params:: ", gender, pageNumber, pageSize, sortOrder);
-	let params = {
+	let queryParams = {
 		gender,
 		page: pageNumber,
 		page_size: pageSize,
 		sort: sortOrder,
 	};
 
-	params = brand ? { ...params, brand: brand.url_key } : params;
-
-	console.log(params);
+	const params =
+		brand && brand.name !== "All Brands"
+			? { ...queryParams, brand: brand.url_key }
+			: queryParams;
 
 	return http.get(apiEndpoint, { params });
 }

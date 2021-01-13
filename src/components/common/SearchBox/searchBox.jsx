@@ -7,7 +7,7 @@ const SearchBox = (props) => {
 		<input
 			type="text"
 			name="query"
-			className="form-control my-3"
+			className="form-control mx-3"
 			placeholder="Search..."
 			value={value}
 			onChange={(e) => onChange(e.currentTarget.value)}
@@ -16,7 +16,7 @@ const SearchBox = (props) => {
 };
 
 SearchBox.propTypes = {
-	value: PropTypes.object,
+	value: PropTypes.string,
 	onChange: PropTypes.func.isRequired,
 };
 export default SearchBox;

@@ -2,7 +2,7 @@ import { shallow } from "enzyme";
 import toJson from "enzyme-to-json";
 import SelectMenu from "./selectMenu";
 
-describe("SearchBox", () => {
+describe("SelectMenu", () => {
 	const options = [
 		{ id: 1, name: "Popularity", value: "popularity" },
 		{ id: 2, name: "New Arrivals", value: "new" },

@@ -24,10 +24,9 @@ exports[`Product should render properly with props 1`] = `
           Brand
         </h6>
         <p
-          className="card-text"
+          className="card-text font-weight-light text-truncate m-1"
           style={
             Object {
-              "fontFamily": "Arial",
               "fontSize": "12px",
             }
           }
@@ -35,10 +34,9 @@ exports[`Product should render properly with props 1`] = `
           XYZ
         </p>
         <p
-          className="card-text"
+          className="card-text font-weight-light m-1"
           style={
             Object {
-              "fontFamily": "Arial",
               "fontSize": "12px",
             }
           }
