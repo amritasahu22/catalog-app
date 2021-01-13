@@ -36,6 +36,7 @@ This is used to add navigation.
   bootstrap Accordian so SideMenu can have multiple refine and filtering options.
 - Convert Products component from class component to functional component using hooks - useState & useEffect.
 - SASS can be added for styles maintenance and resusability.
+- Integrating web accessibility.
 - Look and feel needs to be improved.
 
 # Run on local
