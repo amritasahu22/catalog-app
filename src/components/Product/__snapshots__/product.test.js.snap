@@ -17,32 +17,33 @@ exports[`Product should render properly with props 1`] = `
       />
       <div
         className="card-body"
+        style={
+          Object {
+            "height": "20vh",
+          }
+        }
       >
         <h6
           className="card-title"
+          style={
+            Object {
+              "fontSize": "12px",
+              "marginBottom": "1px",
+            }
+          }
         >
           Brand
         </h6>
         <p
-          className="card-text font-weight-light text-truncate m-1"
+          className="card-text font-weight-light text-truncate"
           style={
             Object {
               "fontSize": "12px",
+              "marginBottom": "1px",
             }
           }
         >
           XYZ
-        </p>
-        <p
-          className="card-text font-weight-light m-1"
-          style={
-            Object {
-              "fontSize": "12px",
-            }
-          }
-        >
-          $
-          22
         </p>
       </div>
     </div>

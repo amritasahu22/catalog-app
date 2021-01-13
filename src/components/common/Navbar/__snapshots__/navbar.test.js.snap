@@ -4,17 +4,18 @@ exports[`should render properly 1`] = `
 <nav
   className="navbar navbar-expand-md navbar-dark bg-dark fixed-top"
 >
-  <a
+  <Link
     className="navbar-brand"
+    to="/"
   >
     THE ICONIC
-  </a>
+  </Link>
   <button
-    aria-controls="navbarsExampleDefault"
+    aria-controls="navbars"
     aria-expanded="false"
     aria-label="Toggle navigation"
     className="navbar-toggler"
-    data-target="#navbarsExampleDefault"
+    data-target="#navbars"
     data-toggle="collapse"
     type="button"
   >
@@ -24,16 +25,17 @@ exports[`should render properly 1`] = `
   </button>
   <div
     className="collapse navbar-collapse"
-    id="navbarsExampleDefault"
+    id="navbars"
   >
     <ul
       className="navbar-nav mr-auto"
     >
       <li
-        className="nav-item active"
+        className="nav-item"
       >
-        <a
+        <NavLink
           className="nav-link"
+          to="/home"
         >
           Home 
           <span
@@ -41,16 +43,17 @@ exports[`should render properly 1`] = `
           >
             (current)
           </span>
-        </a>
+        </NavLink>
       </li>
       <li
-        className="nav-item"
+        className="nav-item active"
       >
-        <a
+        <NavLink
           className="nav-link"
+          to="/catalog-app"
         >
           Women
-        </a>
+        </NavLink>
       </li>
     </ul>
   </div>
