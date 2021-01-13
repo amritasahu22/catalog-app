@@ -3,14 +3,9 @@ import PropTypes from "prop-types";
 
 const Product = (props) => {
 	const { products, selectedProduct, onProductSelect } = props;
+
 	const styles = {
 		fontSize: "12px",
-		//fontFamily: "san-serif",
-	};
-
-	const TYPE = {
-		NEW: "new",
-		SALE: "sale",
 	};
 
 	return (
