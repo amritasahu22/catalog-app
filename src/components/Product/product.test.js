@@ -23,7 +23,14 @@ describe("Product", () => {
 	];
 
 	test("should render properly with props", () => {
-		const component = shallow(<Product products={products} />);
+		const selectedProduct = null;
+		const component = shallow(
+			<Product
+				products={products}
+				selectedProduct={selectedProduct}
+				onProductSelect={() => {}}
+			/>
+		);
 		expect(toJson(component)).toMatchSnapshot();
 	});
 });

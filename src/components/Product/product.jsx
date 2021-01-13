@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Product = (props) => {
-	const { products } = props;
+	const { products, selectedProduct, onProductSelect } = props;
 	const styles = {
 		fontSize: "12px",
 		fontFamily: "Arial",
@@ -11,8 +11,15 @@ const Product = (props) => {
 	return (
 		<>
 			{products.map((product) => (
-				<div className="col-md-3" key={product.sku}>
-					<div className="card mb-4 box-shadow clickable border border-warning">
+				<div key={product.sku} className="col-md-3">
+					<div
+						className={
+							product === selectedProduct
+								? "card mb-4 clickable border-secondary"
+								: "card mb-4 clickable"
+						}
+						onClick={() => onProductSelect(product)}
+					>
 						<img
 							src={product._embedded.images[0].url}
 							alt={product._embedded.brand.name}
@@ -36,6 +43,8 @@ const Product = (props) => {
 
 Product.propTypes = {
 	products: PropTypes.array.isRequired,
+	selectedProduct: PropTypes.object,
+	onProductSelect: PropTypes.func.isRequired,
 };
 
 export default Product;

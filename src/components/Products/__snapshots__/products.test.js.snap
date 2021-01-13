@@ -11,7 +11,7 @@ exports[`should render properly 1`] = `
       className="row"
     >
       <div
-        className="col-md-3 mb-3"
+        className="col-md-3"
       >
         <ListGroup
           items={Array []}
@@ -22,7 +22,7 @@ exports[`should render properly 1`] = `
         />
       </div>
       <div
-        className="col-md"
+        className="col-md-9"
       >
         <div
           className="row"
@@ -39,7 +39,9 @@ exports[`should render properly 1`] = `
           className="row"
         >
           <Product
+            onProductSelect={[Function]}
             products={Array []}
+            selectedProduct={null}
           />
         </div>
       </div>
