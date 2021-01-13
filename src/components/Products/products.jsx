@@ -26,9 +26,9 @@ class Products extends Component {
 		this.setState({ brands: brands, selectedBrand: allBrands });
 	}
 
-	async populateProducts(page, sortOrder) {
+	async populateProducts(page, sortOrder, brand) {
 		//const { currentPage, sortOrder } = this.state;
-		const { data: productData } = await getProducts(page, sortOrder);
+		const { data: productData } = await getProducts(page, sortOrder, brand);
 		console.log("Products service:", productData._embedded.product.length);
 		this.setState({
 			products: productData._embedded.product,
@@ -36,17 +36,23 @@ class Products extends Component {
 			pageSize: productData.page_size,
 			currentPage: page,
 			pageCount: productData.page_count,
+			selectedBrand: brand,
 		});
 	}
 
 	async componentDidMount() {
-		await this.populateProducts(this.state.currentPage, this.state.sortOrder);
+		await this.populateProducts(
+			this.state.currentPage,
+			this.state.sortOrder,
+			this.state.selectedBrand
+		);
 		await this.populateBrands();
 	}
 
 	handleBrandSelect = (brand) => {
-		console.log("Brand selected", brand.name);
-		this.setState({ selectedBrand: brand, searchQuery: "" });
+		console.log("Brand selected", brand.name, brand.url_key);
+		this.populateProducts(1, this.state.sortOrder, brand);
+		//this.setState({ selectedBrand: brand, searchQuery: "" });
 	};
 
 	handleProductSelect = (product) => {
@@ -56,13 +62,44 @@ class Products extends Component {
 
 	handlePageChange = (page) => {
 		console.log("Page changed", page);
-		this.populateProducts(page, this.state.sortOrder);
+		this.populateProducts(page, this.state.sortOrder, this.state.selectedBrand);
 		//this.setState({ currentPage: page });
+	};
+
+	getPagedData = () => {
+		const {
+			pageSize,
+			currentPage,
+			products: allProducts,
+			selectedBrand,
+			searchQuery,
+		} = this.state;
+
+		//Filter
+		let filteredProducts = allProducts;
+		console.log("All Products inital", filteredProducts.length);
+
+		//Search
+		// if (searchQuery)
+		// 	filteredProducts = allProducts.filter(
+		// 		(product) =>
+		// 			product._embedded.brand.name
+		// 				.toLowerCase()
+		// 				.includes(searchQuery.toLowerCase()) ||
+		// 			product.name.toLowerCase().includes(searchQuery.toLowerCase())
+		// 	);
+		// else
+		// if (selectedBrand && selectedBrand.id)
+		// 	filteredProducts = allProducts.filter(
+		// 		(product) => product._embedded.brand.id === selectedBrand.id
+		// 	);
+
+		return { totalCount: filteredProducts.length, data: filteredProducts };
 	};
 
 	render() {
 		const {
-			products,
+			//	products,
 			brands,
 			selectedBrand,
 			selectedProduct,
@@ -80,6 +117,8 @@ class Products extends Component {
 				</p>
 			);
 
+		const { totalCount, data: products } = this.getPagedData();
+
 		return (
 			<div className="album py-5 bg-light my-4">
 				<div className="container">
@@ -94,16 +133,16 @@ class Products extends Component {
 						<div className="col-md-9">
 							<div className="row">
 								<Pagination
-									totalItems={products.length}
+									totalItems={totalCount}
 									pageSize={pageSize}
 									currentPage={currentPage}
-									totalPageCount={20}
+									totalPageCount={pageCount}
 									onPageChange={this.handlePageChange}
 								/>
 							</div>
 							<div className="row">
 								<p className=" align-text-left font-weight-normal">
-									Showing {products.length} products
+									Showing {totalCount} products
 								</p>
 							</div>
 							<div className="row">

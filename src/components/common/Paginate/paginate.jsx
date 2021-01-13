@@ -11,13 +11,7 @@ const Pagination = (props) => {
 		onPageChange,
 	} = props;
 
-	console.log("Total Items", totalItems);
-
-	//let pageCount = Math.ceil(totalItems / pageSize);
-	//console.log("PageCount:", pageCount);
-	//if (pageCount === 1) return null;
 	const pages = range(1, totalPageCount + 1);
-	console.log("pages range:", pages, totalPageCount);
 
 	return (
 		<nav className="Paginate">
@@ -40,7 +34,8 @@ const Pagination = (props) => {
 					if (
 						page === 1 ||
 						(page >= currentPage - 2 && page <= currentPage + 2)
-					)
+					) {
+						console.log(page);
 						return (
 							<li
 								className={
@@ -56,6 +51,7 @@ const Pagination = (props) => {
 								</a>
 							</li>
 						);
+					}
 				})}
 
 				<li
