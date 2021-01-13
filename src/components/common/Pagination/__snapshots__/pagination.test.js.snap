@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination should render properly with props 1`] = `
+<nav
+  className="Paginate"
+>
+  <ul
+    className="pagination pagination-md
+ justify-content-end clickable"
+  >
+    <li
+      className="page-item disabled"
+    >
+      <a
+        aria-label="Previous"
+        className="page-link text-dark bg-light"
+        onClick={[Function]}
+      >
+        <span
+          aria-hidden="true"
+        >
+          «
+        </span>
+        <span
+          className="sr-only"
+        >
+          Previous
+        </span>
+      </a>
+    </li>
+    <li
+      className="page-item active"
+      key="1"
+    >
+      <a
+        className="page-link text-dark bg-light"
+        onClick={[Function]}
+      >
+        1
+      </a>
+    </li>
+    <li
+      className="page-item"
+      key="2"
+    >
+      <a
+        className="page-link text-dark bg-light"
+        onClick={[Function]}
+      >
+        2
+      </a>
+    </li>
+    <li
+      className="page-item"
+      key="3"
+    >
+      <a
+        className="page-link text-dark bg-light"
+        onClick={[Function]}
+      >
+        3
+      </a>
+    </li>
+    <li
+      className="page-item"
+    >
+      <a
+        aria-label="Next"
+        className="page-link text-dark bg-light"
+        onClick={[Function]}
+      >
+        <span
+          aria-hidden="true"
+        >
+          »
+        </span>
+        <span
+          className="sr-only"
+        >
+          Next
+        </span>
+      </a>
+    </li>
+  </ul>
+</nav>
+`;

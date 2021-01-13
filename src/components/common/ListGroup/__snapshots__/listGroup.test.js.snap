@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListGroup should render properly with props 1`] = `
+<ul
+  className="list-group clickable list-group-ul"
+>
+  <li
+    className="list-group-item list-group-item-action list-group-item-light border-white active"
+    key="1"
+    onClick={[Function]}
+    style={
+      Object {
+        "fontFamily": "san-serif",
+        "fontSize": "0.9rem",
+        "padding": "0.1rem",
+      }
+    }
+  >
+    17 Sundays
+  </li>
+  <li
+    className="list-group-item list-group-item-action list-group-item-light border-white"
+    key="2"
+    onClick={[Function]}
+    style={
+      Object {
+        "fontFamily": "san-serif",
+        "fontSize": "0.9rem",
+        "padding": "0.1rem",
+      }
+    }
+  >
+    2XU
+  </li>
+</ul>
+`;
