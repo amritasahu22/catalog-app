@@ -34,7 +34,10 @@ class Products extends Component {
 		const allBrands = { id: "", name: "All Brands" };
 		const brands = [allBrands, ...brandData._embedded.brand];
 
-		this.setState({ brands: brands, selectedBrand: allBrands });
+		this.setState({
+			brands: brands,
+			selectedBrand: allBrands,
+		});
 	}
 
 	async populateProducts(page, sortOrder, brand) {
@@ -130,7 +133,7 @@ class Products extends Component {
 			<div className="album py-5 bg-light my-4">
 				<div className="container">
 					<div className="row">
-						<div className="col-md-3">
+						<div className="col-md-3 mb-2">
 							<ListGroup
 								items={brands}
 								selectedItem={selectedBrand}
