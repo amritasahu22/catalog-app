@@ -5,15 +5,15 @@ It is a sample catalog app for women products using react 16.14.0, bootstrap 4.5
 # Component Tree
 
 App
-|->ToastContainer
-|-> Navbar
-|-> Products
-|->|-> Product
-|->|-> ListGroup
-|->|-> SearchBox
-|->|-> SelectMenu
-|->|-> Pagination
-|-> Footer
+--ToastContainer
+--Navbar
+--Products
+---- Product
+---- ListGroup
+---- SearchBox
+---- SelectMenu
+---- Pagination
+---- Footer
 
 # HTTP Service-
 
