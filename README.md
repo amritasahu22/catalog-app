@@ -26,12 +26,18 @@ Library used - axios
 
 # Improvements to be done:
 
-1 Test cases and coverage to be improved.
-2 Need to compose SelectMenu component inside SideMenu component, which uses
-bootstrap Accordian so SideMenu can have multiple refine and filtering options.
-3 Add React-Routing for navigation
-4 SASS can be added for styles maintenance and resusability.
-5 Look and feel needs to be improved.
+- Test cases and coverage to be improved.
+- Need to compose SelectMenu component inside SideMenu component, which uses
+  bootstrap Accordian so SideMenu can have multiple refine and filtering options.
+- Add React-Routing for navigation
+- SASS can be added for styles maintenance and resusability.
+- Look and feel needs to be improved.
+
+# Run on local
+Clone the code on local and run it using "npm start".
+Runs the app in the development mode.
+Open [http://localhost:3000] to view it in the browser.
+URL - http://localhost:3000
 
 # Getting Started with Create React App
 
